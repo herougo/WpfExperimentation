@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace WpfNetFramework.Core
+namespace WpfStartFromNet9.Core
 {
     public abstract class CommandBase : ICommand
     {

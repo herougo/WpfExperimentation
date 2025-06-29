@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using WpfNetFramework.Commands;
-using WpfNetFramework.Core;
-using WpfNetFramework.Stores;
+using WpfStartFromNet9.Commands;
+using WpfStartFromNet9.Core;
+using WpfStartFromNet9.Stores;
 
-namespace WpfNetFramework.ViewModels
+namespace WpfStartFromNet9.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {

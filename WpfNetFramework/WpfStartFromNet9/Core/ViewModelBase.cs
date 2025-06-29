@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfNetFramework.Core
+namespace WpfStartFromNet9.Core
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

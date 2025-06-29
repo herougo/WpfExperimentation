@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using WpfNetFramework.Core;
-using WpfNetFramework.Stores;
+using WpfStartFromNet9.Core;
+using WpfStartFromNet9.Stores;
 
-namespace WpfNetFramework.Commands
+namespace WpfStartFromNet9.Commands
 {
     public class IncrementCounterCommand : CommandBase
     {

@@ -8,10 +8,10 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfNetFramework.Stores;
-using WpfNetFramework.ViewModels;
+using WpfStartFromNet9.Stores;
+using WpfStartFromNet9.ViewModels;
 
-namespace WpfNetFramework
+namespace WpfStartFromNet9
 {
     /// <summary>
     /// Interaction logic for App.xaml

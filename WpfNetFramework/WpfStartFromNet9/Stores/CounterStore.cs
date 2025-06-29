@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfNetFramework.Stores
+namespace WpfStartFromNet9.Stores
 {
     public class CounterStore
     {
