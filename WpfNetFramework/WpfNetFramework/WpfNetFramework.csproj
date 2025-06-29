@@ -172,6 +172,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\IncrementCounterCommand.cs" />
+    <Compile Include="Core\CommandBase.cs" />
     <Compile Include="Core\ViewModelBase.cs" />
     <Compile Include="Stores\CounterStore.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
