@@ -1,12 +1,14 @@
-﻿<Window x:Class="WpfStartFromNet9.MainWindow"
+﻿<Window x:Class="WpfNetFramework.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfStartFromNet9"
+        xmlns:local="clr-namespace:WpfNetFramework"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <TextBox HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
