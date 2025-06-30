@@ -9,7 +9,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="612,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
         <Button Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
         <uc:NumericUpDown></uc:NumericUpDown>
         <xctk:IntegerUpDown Name="myUpDownControl" Height="26" Margin="240,55,460,279" />

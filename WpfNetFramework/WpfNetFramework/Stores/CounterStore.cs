@@ -10,14 +10,19 @@ namespace WpfNetFramework.Stores
     {
         private int _value = 0;
 
-        public int Value { get { return _value; } }
+        public int Value {
+            get { return _value; }
+            set {
+                _value = value;
+                ValueChanged?.Invoke();
+            }
+        }
         
         public event Action ValueChanged;
 
         public void Increment()
         {
-            _value++;
-            ValueChanged?.Invoke();
+            Value++;
         }
     }
 }

@@ -13,8 +13,16 @@ namespace WpfNetFramework.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         CounterStore _counterStore;
-        public int Counter => _counterStore.Value;
-
+        public int Counter {
+            get { return _counterStore.Value; }
+            set {
+                if (_counterStore.Value != value)
+                {
+                    _counterStore.Value = value;
+                }
+            }
+        }
+            
         public ICommand IncrementCounterCommand { get; }
 
         public MainWindowViewModel(CounterStore counterStore)
