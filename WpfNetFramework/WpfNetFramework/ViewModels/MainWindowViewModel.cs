@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
@@ -33,7 +34,21 @@ namespace WpfNetFramework.ViewModels
                 }
             }
         }
-            
+
+        private SecureString _password;
+        public SecureString PasswordSecureString
+        {
+            get { return _password; }
+            set
+            {
+                if (value != null)
+                {
+                    _password = value;
+                    OnPropertyChanged(nameof(PasswordSecureString));
+                }
+            }
+        }
+
         public ICommand IncrementCounterCommand { get; }
 
         public MainWindowViewModel(CounterStore counterStore)

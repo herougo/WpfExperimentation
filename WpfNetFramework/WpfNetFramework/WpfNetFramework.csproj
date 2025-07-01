@@ -198,6 +198,7 @@
     <Compile Include="Commands\IncrementCounterCommand.cs" />
     <Compile Include="Core\CommandBase.cs" />
     <Compile Include="Core\ViewModelBase.cs" />
+    <Compile Include="Lib\PasswordBoxHelper.cs" />
     <Compile Include="Stores\CounterStore.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\UserControls\NumericUpDown.xaml.cs">

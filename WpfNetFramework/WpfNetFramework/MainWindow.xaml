@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfNetFramework"
+        xmlns:lib="clr-namespace:WpfNetFramework.Lib"
         xmlns:uc="clr-namespace:WpfNetFramework.Views.UserControls"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
@@ -16,5 +17,12 @@
         <Button Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
         <uc:NumericUpDown></uc:NumericUpDown>
         <xctk:IntegerUpDown Name="myUpDownControl" Height="26" Margin="240,55,460,279" />
+        <PasswordBox 
+            HorizontalAlignment="Left"
+            Margin="312,255,0,0"
+            VerticalAlignment="Top"
+            Width="120"
+            lib:PasswordBoxHelper.Attach="True"
+            lib:PasswordBoxHelper.BoundPassword="{Binding Path=PasswordSecureString, Mode=OneWayToSource}"/>
     </Grid>
 </Window>
