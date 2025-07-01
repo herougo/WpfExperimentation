@@ -49,6 +49,20 @@ namespace WpfNetFramework.ViewModels
             }
         }
 
+        private SecureString _password2;
+        public SecureString PasswordSecureString2
+        {
+            get { return _password2; }
+            set
+            {
+                if (value != null)
+                {
+                    _password2 = value;
+                    OnPropertyChanged(nameof(PasswordSecureString2));
+                }
+            }
+        }
+
         public ICommand IncrementCounterCommand { get; }
 
         public MainWindowViewModel(CounterStore counterStore)

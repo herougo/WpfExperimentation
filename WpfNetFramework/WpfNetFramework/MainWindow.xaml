@@ -24,5 +24,12 @@
             Width="120"
             lib:PasswordBoxHelper.Attach="True"
             lib:PasswordBoxHelper.BoundPassword="{Binding Path=PasswordSecureString, Mode=OneWayToSource}"/>
+        <PasswordBox 
+            HorizontalAlignment="Left"
+            Margin="312,278,0,0"
+            VerticalAlignment="Top"
+            Width="120"
+            lib:PasswordBoxHelper.Attach="True"
+            lib:PasswordBoxHelper.BoundPassword="{Binding PasswordSecureString2, Mode=OneWayToSource}"/>
     </Grid>
 </Window>
