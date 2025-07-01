@@ -1,6 +1,10 @@
 WpfNetFramework/.vs/
 WpfNetFramework/WpfNetFramework/bin/
 WpfNetFramework/WpfNetFramework/obj/
+WpfNetFramework/WpfNetFramework.Test.E2E/bin/
+WpfNetFramework/WpfNetFramework.Test.E2E/obj/
 WpfNetFramework/WpfStartFromNet9/bin/
 WpfNetFramework/WpfStartFromNet9/obj/
+WpfNetFramework/WpfStartFromNet9.Test.E2E/bin/
+WpfNetFramework/WpfStartFromNet9.Test.E2E/obj/
 WpfNetFramework/packages/
