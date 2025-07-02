@@ -10,11 +10,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=CounterText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" VerticalAlignment="Top" Width="120"
+        <TextBox Name="CountTextBox" HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=CounterText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" VerticalAlignment="Top" Width="120"
                  ToolTip="{Binding (Validation.Errors)[0].ErrorContent, 
                                    RelativeSource={RelativeSource Self}}"/>
-        <TextBox HorizontalAlignment="Left" Margin="612,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
+        <TextBox Name="CountCopyTextBox" HorizontalAlignment="Left" Margin="612,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
+        <Button Name="IncrementButton" Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
         <uc:NumericUpDown></uc:NumericUpDown>
         <xctk:IntegerUpDown Name="myUpDownControl" Height="26" Margin="240,55,460,279" />
         <PasswordBox 
@@ -25,7 +25,7 @@
             lib:PasswordBoxHelper.Attach="True"
             lib:PasswordBoxHelper.BoundPassword="{Binding Path=PasswordSecureString,
                 Mode=TwoWay,  UpdateSourceTrigger=PropertyChanged}"/>
-        <PasswordBox 
+        <PasswordBox
             HorizontalAlignment="Left"
             Margin="312,278,0,0"
             VerticalAlignment="Top"

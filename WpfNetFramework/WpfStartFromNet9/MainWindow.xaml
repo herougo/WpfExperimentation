@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
+        <TextBox Name="CountTextBox" HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
+        <Button Name="IncrementButton" Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

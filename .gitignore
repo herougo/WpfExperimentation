@@ -1,4 +1,9 @@
 WpfNetFramework/.vs/
+WpfNetFramework/TestProject1/bin/
+WpfNetFramework/TestProject1/obj/
+WpfNetFramework/WindowsFormsApp/bin/
+WpfNetFramework/WindowsFormsApp/obj/
+WpfNetFramework/WpfStartFromNet9.Test.E2E/obj/
 WpfNetFramework/WpfNetFramework/bin/
 WpfNetFramework/WpfNetFramework/obj/
 WpfNetFramework/WpfNetFramework.Test.E2E/bin/
