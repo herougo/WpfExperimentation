@@ -4,12 +4,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.Metrics;
 using System.Linq;
+using System.Net;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using WpfNetFramework.Commands;
 using WpfNetFramework.Core;
+using WpfNetFramework.Lib;
 using WpfNetFramework.Stores;
 
 namespace WpfNetFramework.ViewModels
@@ -44,13 +46,16 @@ namespace WpfNetFramework.ViewModels
                 if (value != null)
                 {
                     _password = value;
+                    UnsecurePassword = PasswordBoxHelper.ConvertToUnsecureString(value);
                     OnPropertyChanged(nameof(PasswordSecureString));
                 }
             }
         }
 
-        private SecureString _password2;
-        public SecureString PasswordSecureString2
+
+
+        private string _password2;
+        public string UnsecurePassword
         {
             get { return _password2; }
             set
@@ -58,7 +63,7 @@ namespace WpfNetFramework.ViewModels
                 if (value != null)
                 {
                     _password2 = value;
-                    OnPropertyChanged(nameof(PasswordSecureString2));
+                    OnPropertyChanged(nameof(UnsecurePassword));
                 }
             }
         }
@@ -72,6 +77,8 @@ namespace WpfNetFramework.ViewModels
             IncrementCounterCommand = new IncrementCounterCommand(_counterStore);
 
             _counterStore.ValueChanged += OnValueChanged;
+
+            PasswordSecureString = new NetworkCredential("", "hello").SecurePassword;
         }
 
         private void ValidateCounterText()

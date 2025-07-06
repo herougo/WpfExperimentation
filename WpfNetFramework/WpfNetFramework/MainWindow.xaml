@@ -25,13 +25,6 @@
             lib:PasswordBoxHelper.Attach="True"
             lib:PasswordBoxHelper.BoundPassword="{Binding Path=PasswordSecureString,
                 Mode=TwoWay,  UpdateSourceTrigger=PropertyChanged}"/>
-        <PasswordBox
-            HorizontalAlignment="Left"
-            Margin="312,278,0,0"
-            VerticalAlignment="Top"
-            Width="120"
-            lib:PasswordBoxHelper.Attach="True"
-            lib:PasswordBoxHelper.BoundPassword="{Binding PasswordSecureString2,
-                Mode=TwoWay,  UpdateSourceTrigger=PropertyChanged}"/>
+        <TextBox Text="{Binding Path=UnsecurePassword, Mode=TwoWay,  UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="47" Margin="312,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
