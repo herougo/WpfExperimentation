@@ -8,6 +8,7 @@ using System.Net;
 using System.Security;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using WpfNetFramework.Commands;
 using WpfNetFramework.Core;
@@ -43,7 +44,7 @@ namespace WpfNetFramework.ViewModels
             get { return _password; }
             set
             {
-                if (value != null)
+                if (value != _password)
                 {
                     _password = value;
                     UnsecurePassword = PasswordBoxHelper.ConvertToUnsecureString(value);
@@ -60,7 +61,7 @@ namespace WpfNetFramework.ViewModels
             get { return _password2; }
             set
             {
-                if (value != null)
+                if (value != _password2)
                 {
                     _password2 = value;
                     OnPropertyChanged(nameof(UnsecurePassword));
@@ -68,13 +69,43 @@ namespace WpfNetFramework.ViewModels
             }
         }
 
+        private string _text = "";
+        public string Text
+        {
+            get { return _text; }
+            set
+            {
+                if (value != _text)
+                {
+                    _text = value;
+                    OnPropertyChanged(nameof(Text));
+                }
+            }
+        }
+
+        private string _selectedText = "";
+        public string SelectedText
+        {
+            get { return _selectedText; }
+            set
+            {
+                if (value != _selectedText)
+                {
+                    _selectedText = value;
+                    OnPropertyChanged(nameof(SelectedText));
+                }
+            }
+        }
+
         public ICommand IncrementCounterCommand { get; }
+        public ICommand ClickCutCommand { get; }
 
         public MainWindowViewModel(CounterStore counterStore)
         {
             _counterStore = counterStore;
 
             IncrementCounterCommand = new IncrementCounterCommand(_counterStore);
+            ClickCutCommand = new RelayCommand(ClickCut);
 
             _counterStore.ValueChanged += OnValueChanged;
 
@@ -145,6 +176,11 @@ namespace WpfNetFramework.ViewModels
         {
             OnPropertyChanged(nameof(Counter));
             CounterText = Counter.ToString();
+        }
+
+        public void ClickCut(object parameter)
+        {
+            SelectedText = "hello";
         }
     }
 }

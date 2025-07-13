@@ -26,5 +26,25 @@
             lib:PasswordBoxHelper.BoundPassword="{Binding Path=PasswordSecureString,
                 Mode=TwoWay,  UpdateSourceTrigger=PropertyChanged}"/>
         <TextBox Text="{Binding Path=UnsecurePassword, Mode=TwoWay,  UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Height="47" Margin="312,278,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox
+            HorizontalAlignment="Left"
+            Margin="612,278,0,0"
+            VerticalAlignment="Top"
+            Width="120"
+            Text="{Binding Text}"
+            lib:TextBoxHelper.SelectedText="{Binding SelectedText}"
+        >
+            <TextBox.ContextMenu>
+                <ContextMenu 
+                    Name="cxm"
+                >
+                    <MenuItem 
+                        Header="Cut"
+                        Name="cxmItemCut" 
+                        Command="{Binding ClickCutCommand}" 
+                    />
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
     </Grid>
 </Window>
