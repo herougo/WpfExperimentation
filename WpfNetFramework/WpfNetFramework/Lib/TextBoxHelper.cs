@@ -8,9 +8,10 @@ using System.Windows.Controls;
 
 namespace WpfNetFramework.Lib
 {
+    // source: https://stackoverflow.com/questions/2245928/mvvm-and-the-textboxs-selectedtext-property
+
     public static class TextBoxHelper
     {
-
         public static string GetSelectedText(DependencyObject obj)
         {
             return (string)obj.GetValue(SelectedTextProperty);
