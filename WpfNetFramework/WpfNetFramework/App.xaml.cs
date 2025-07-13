@@ -26,9 +26,9 @@ namespace WpfNetFramework
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddSingleton<CounterStore>();
-                    services.AddSingleton<MainWindowViewModel>();
+                    services.AddTransient<MainWindowViewModel>();
 
-                    services.AddSingleton(s => new MainWindow()
+                    services.AddTransient(s => new MainWindow()
                     {
                         DataContext = s.GetRequiredService<MainWindowViewModel>()
                     });

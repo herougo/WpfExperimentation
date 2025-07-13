@@ -199,10 +199,15 @@
     <Compile Include="Core\CommandBase.cs" />
     <Compile Include="Core\ViewModelBase.cs" />
     <Compile Include="Lib\PasswordBoxHelper.cs" />
+    <Compile Include="Services\WindowManagerService.cs" />
     <Compile Include="Stores\CounterStore.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\MyWindowViewModel.cs" />
     <Compile Include="Views\UserControls\NumericUpDown.xaml.cs">
       <DependentUpon>NumericUpDown.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Windows\MyWindow.xaml.cs">
+      <DependentUpon>MyWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -217,6 +222,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Views\UserControls\NumericUpDown.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Windows\MyWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
