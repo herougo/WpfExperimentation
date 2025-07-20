@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfNetFramework.Stores
 {
-    public class CounterStore
+    public class CounterStore : IDisposable
     {
         private int _value = 0;
 
@@ -19,6 +19,16 @@ namespace WpfNetFramework.Stores
         }
         
         public event Action ValueChanged;
+
+        public CounterStore()
+        {
+
+        }
+
+        public void Dispose()
+        {
+
+        }
 
         public void Increment()
         {
