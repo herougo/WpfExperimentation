@@ -8,6 +8,7 @@
         xmlns:uc="clr-namespace:WpfNetFramework.Views.UserControls"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
+        Icon="/Resources/transparent_32x32.ico"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox Name="CountTextBox" HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=CounterText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" VerticalAlignment="Top" Width="120"

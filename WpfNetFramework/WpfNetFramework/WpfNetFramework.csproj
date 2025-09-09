@@ -201,6 +201,7 @@
     <Compile Include="Core\CommandBase.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Core\ViewModelBase.cs" />
+    <Compile Include="Lib\IconLoader.cs" />
     <Compile Include="Lib\PasswordBoxHelper.cs" />
     <Compile Include="Lib\TextBoxHelper.cs" />
     <Compile Include="Stores\CounterStore.cs" />
@@ -261,8 +262,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
     <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\transparent_32x32.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\CommunityToolkit.Mvvm.8.4.0\build\CommunityToolkit.Mvvm.targets" Condition="Exists('..\packages\CommunityToolkit.Mvvm.8.4.0\build\CommunityToolkit.Mvvm.targets')" />
