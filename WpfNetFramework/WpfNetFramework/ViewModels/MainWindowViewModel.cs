@@ -97,8 +97,24 @@ namespace WpfNetFramework.ViewModels
             }
         }
 
+        private bool _optionOneEnabled = true;
+
+        public bool OptionOneEnabled
+        {
+            get { return _optionOneEnabled; }
+            set
+            {
+                if (_optionOneEnabled != value)
+                {
+                    _optionOneEnabled = value;
+                    OnPropertyChanged(nameof(OptionOneEnabled));
+                }
+            }
+        }
+
         public ICommand IncrementCounterCommand { get; }
         public ICommand ClickCutCommand { get; }
+        public ICommand MenuOpenedCommand { get; }
 
         public MainWindowViewModel(CounterStore counterStore)
         {
@@ -106,6 +122,7 @@ namespace WpfNetFramework.ViewModels
 
             IncrementCounterCommand = new IncrementCounterCommand(_counterStore);
             ClickCutCommand = new RelayCommand(ClickCut);
+            MenuOpenedCommand = new RelayCommand(MenuOpened);
 
             _counterStore.ValueChanged += OnValueChanged;
 
@@ -181,6 +198,11 @@ namespace WpfNetFramework.ViewModels
         public void ClickCut(object parameter)
         {
             SelectedText = "hello";
+        }
+
+        private void MenuOpened(object parameter)
+        {
+            OptionOneEnabled = false;
         }
     }
 }

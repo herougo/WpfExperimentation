@@ -7,13 +7,25 @@
         xmlns:lib="clr-namespace:WpfNetFramework.Lib"
         xmlns:uc="clr-namespace:WpfNetFramework.Views.UserControls"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         mc:Ignorable="d"
         Icon="/Resources/transparent_32x32.ico"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBox Name="CountTextBox" HorizontalAlignment="Left" Margin="312,194,0,0" TextWrapping="Wrap" Text="{Binding Path=CounterText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" VerticalAlignment="Top" Width="120"
                  ToolTip="{Binding (Validation.Errors)[0].ErrorContent, 
-                                   RelativeSource={RelativeSource Self}}"/>
+                                   RelativeSource={RelativeSource Self}}">
+            <TextBox.ContextMenu>
+                <ContextMenu>
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Opened">
+                            <i:InvokeCommandAction Command="{Binding MenuOpenedCommand}" />
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                    <MenuItem IsEnabled="{Binding OptionOneEnabled}" Header="Option 1" />
+                </ContextMenu>
+            </TextBox.ContextMenu>
+        </TextBox>
         <TextBox Name="CountCopyTextBox" HorizontalAlignment="Left" Margin="612,194,0,0" TextWrapping="Wrap" Text="{Binding Path=Counter, Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
         <Button Name="IncrementButton" Content="Increment" HorizontalAlignment="Left" Margin="240,193,0,0" Command="{Binding IncrementCounterCommand}" VerticalAlignment="Top"/>
         <uc:NumericUpDown></uc:NumericUpDown>
